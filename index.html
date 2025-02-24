@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+
+  <div class="bg-shadow"></div>
+
+  <header>
+    <div style="display: flex; gap: 40px; flex: 1;">
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+  
+      <nav class="header-nav">
+        <div class="close-menu-button-container">
+          <button id="close-menu-button"><img src="images/icon-close-menu.svg" alt="close menu button"></button>
+        </div>
+        
+        <ul>
+          <li class="features"><button id="features-button">Features <img src="images/icon-arrow-down.svg" alt="arrow down"></button>
+            <ul class="features-dropdown">
+              <li><img src="images/icon-todo.svg" alt="icon todo"><a href="#">To do list</a></li>
+              <li><img src="images/icon-calendar.svg" alt="icon calendar"><a href="#">Calendar</a></li>
+              <li><img src="images/icon-reminders.svg" alt="icon reminders"><a href="#">Reminders</a></li>
+              <li><img src="images/icon-planning.svg" alt="icon planning"><a href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li class="company"><button id="company-button">Company <img src="images/icon-arrow-down.svg" alt="arrow down"></button>
+            <ul class="company-dropdown">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <nav class="header-buttons">
+          <button>Login</button>
+          <button>Register</button>
+        </nav>
+      </nav>
+    </div>
+    
+    <button id="open-menu-button"><img src="images/icon-menu.svg" alt="menu button"></button>
+  </header>
+
+  <main class="wrapper">
+    <div class="make-remote-work-container">
+      <h2>Make remote work</h2>
+      <p>Get your team in sync, no matter your location.<br>Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class="learn-more-button">Learn more</button>
+
+      <div class="clients-container">
+        <img src="images/client-databiz.svg" alt="databiz">
+        <img src="images/client-audiophile.svg" alt="audiophile">
+        <img src="images/client-meet.svg" alt="meet">
+        <img src="images/client-maker.svg" alt="maker">
+      </div>
+    </div>
+
+    <div class="image-hero-container">
+      <img src="images/image-hero-desktop.png" alt="image hero" id="image-hero">
+    </div>
+  </main>
+
+<script src="script.js"></script>
+<!-- github.com/rezird -->
+</body>
+</html>

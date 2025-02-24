@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+    /* outline: 1px solid red; */
+}
+:root {
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.active {
+    display: flex !important;
+}
+.bg-shadow {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 998;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    /* outline: 1px solid red; */
+}
+.logo-container {
+    display: grid;
+    align-self: center;
+}
+.header-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+.header-nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--gray);
+    cursor: pointer;
+    font-weight: 500;
+}
+.header-nav ul li a:active {
+    color: var(--black);
+}
+.header-nav ul li button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray);
+    cursor: pointer;
+    font-weight: 500;
+}
+.header-nav button:active {
+    color: var(--black);
+    border-color: var(--black);
+}
+.header-buttons button:active{
+    color: var(--black) !important;
+    border-color: var(--black) !important;
+}
+.header-buttons button {
+    font-size: 1.1rem;
+    border: none;
+    background-color: transparent;
+    padding: 13px 20px;
+    border-radius: 15px;
+    color: var(--gray);
+    font-weight: 500;
+}
+.header-buttons button:hover {
+    cursor: pointer;
+}
+.header-buttons button:last-child {
+    border: 2px solid var(--gray);
+    color: var(--gray);
+    margin-left: 10px;
+}
+#open-menu-button {
+    display: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#close-menu-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.close-menu-button-container {
+    width: 100%;
+    display: none; /* flex */
+    justify-content: end;
+    padding: 20px;
+}
+
+/* dropdowns */
+.features {
+    position: relative;
+    padding: 40px 0px;
+}
+.features-dropdown {
+    /* outline: 1px solid blue; */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none; /* flex */
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    background-color: var(--white);
+}
+.features-dropdown li {
+    display: flex;
+    justify-content: space-between;
+}
+.features-dropdown li a {
+    width: 130px;
+    text-align: center;
+}
+
+.company {
+    position: relative;
+    padding: 40px 0px;
+}
+.company-dropdown {
+    /* outline: 1px solid blue; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; /* flex */
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    background-color: var(--white);
+}
+.company-dropdown li {
+    width: 100px;
+}
+.features-dropdown, .company-dropdown {
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.20);
+}
+
+/* main content */
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.make-remote-work-container h2 {
+    font-size: 4rem;
+    color: var(--black);
+    max-width: 430px;
+}
+.make-remote-work-container p {
+    font-size: 1.4rem;
+    color: var(--gray);
+    line-height: 35px;
+    font-weight: 500;
+    margin: 40px 0px;
+    max-width: 600px;
+}
+.make-remote-work-container {
+    width: 50%;
+}
+.learn-more-button {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.4rem;
+    border: none;
+    padding: 20px 35px;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid var(--black);
+}
+.learn-more-button:active {
+    background-color: var(--white);
+    color: var(--black);
+}
+.clients-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+    width: 100%;
+}
+.clients-container img {
+    max-width: 120px;
+    width: 100%;
+}
+
+.image-hero-container {
+    max-width: 30%;
+    margin-left: 50px;
+}
+.image-hero-container img {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .logo-container {
+        padding: 30px 0px;
+    }
+    #open-menu-button {
+        display: block;
+    }
+    .clients-container {
+        justify-content: center;
+        gap: 20px;
+    }
+    .close-menu-button-container {
+        display: flex;
+    }
+    .header-nav {
+        background-color: var(--white);
+
+        position: fixed;
+        z-index: 999;
+
+        display: none; /* flex */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        max-width: 60%;
+        top: 0;
+        right: 0;
+        height: 100vh;
+    }
+    .header-nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        padding: 0 40px;
+    }
+    .features, .company {
+        padding: 0;
+    }
+    .header-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+    }
+    .header-buttons button:last-child {
+        margin: 0;
+    }
+    /* dropdowns */
+    .features-dropdown {
+        position: initial;
+        box-shadow: none;
+        padding-top: 30px !important;
+    }
+    .company-dropdown {
+        position: initial;
+        box-shadow: none;
+        padding-top: 30px !important;
+    }
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .image-hero-container {
+        margin: 0;
+        max-width: 100%;
+    }
+    .image-hero-container img {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .make-remote-work-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .make-remote-work-container h2 {
+        font-size: 3.5rem;
+        max-width: none;
+        margin: 0px 30px;
+    }
+    .make-remote-work-container p {
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 40px 30px;
+        max-width: 600px;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        padding: 0px 20px;
+    }
+    .make-remote-work-container h2 {
+        font-size: 2.8rem;
+        max-width: none;
+        margin: 0px 30px;
+    }
+    .make-remote-work-container p {
+        text-align: center;
+        margin: 40px 30px;
+        max-width: 600px;
+    }
+}
+@media (max-width: 500px) {
+    .clients-container {
+        margin-top: 40px;
+    }
+    main {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+    .make-remote-work-container h2 {
+        font-size: 2.4rem;
+        max-width: none;
+        margin: 0px 30px;
+    }
+    .make-remote-work-container p {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 40px 30px;
+        max-width: 600px;
+        line-height: 25px;
+    }
+    .learn-more-button {
+        font-size: 1rem;
+        padding: 20px 35px;
+    }
+}
+@media (max-width: 430px) {
+    .clients-container img {
+        max-width: 60px;
+    }
+    .make-remote-work-container h2 {
+        font-size: 1.8rem;
+        max-width: none;
+        margin: 0px 30px;
+    }
+    .make-remote-work-container p {
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 40px 30px;
+        max-width: 600px;
+        line-height: 25px;
+    }
+
+    .features-dropdown, .company-dropdown {
+        padding: 30px 0 !important;
+    }
+    .header-nav ul li a, .header-nav ul li button{
+        font-size: 1rem !important;
+    }
+}
+
+/* github.com/rezird */
