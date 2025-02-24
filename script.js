@@ -23,6 +23,13 @@ companyButton.addEventListener("click", ()=> {
 });
 
 /* handles the image hero responsiveness */
+const imageHero = document.getElementById("image-hero");
+if(window.innerWidth < 900){
+    imageHero.src = "images/image-hero-mobile.png"
+}else{
+    imageHero.src = "images/image-hero-desktop.png"
+    bgShadow.style.display = "none";
+}
 window.addEventListener("resize", ()=>{
     const imageHero = document.getElementById("image-hero");
     if(window.innerWidth < 900){
