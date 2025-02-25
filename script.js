@@ -52,4 +52,4 @@ document.getElementById("close-menu-button").addEventListener("click", ()=>{
     bgShadow.style.display = "none";
 });
 
-/* github.com/rezird */
+/* github.com/macropunk */
