@@ -59,9 +59,8 @@ header {
     color: var(--gray);
     cursor: pointer;
     font-weight: 500;
-    transition: color 0.3s;
 }
-.header-nav ul li a:hover {
+.header-nav ul li a:active {
     color: var(--black);
 }
 .header-nav ul li button {
@@ -74,13 +73,12 @@ header {
     color: var(--gray);
     cursor: pointer;
     font-weight: 500;
-    transition: all 0.2s;
 }
-.header-nav button:hover {
+.header-nav button:active {
     color: var(--black);
     border-color: var(--black);
 }
-.header-buttons button:hover{
+.header-buttons button:active{
     color: var(--black) !important;
     border-color: var(--black) !important;
 }
@@ -92,7 +90,6 @@ header {
     border-radius: 15px;
     color: var(--gray);
     font-weight: 500;
-    transition: all 0.2s;
 }
 .header-buttons button:hover {
     cursor: pointer;
@@ -206,9 +203,8 @@ main {
     font-weight: 700;
     cursor: pointer;
     border: 2px solid var(--black);
-    transition: all 0.2s;
 }
-.learn-more-button:hover {
+.learn-more-button:active {
     background-color: var(--white);
     color: var(--black);
 }
